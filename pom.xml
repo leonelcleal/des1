@@ -1,18 +1,17 @@
 ﻿<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.teste</groupId>
 	<artifactId>teste-ini</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<description>Teste-ini</description>
-	
+
 	<properties>
 		<java.version>21</java.version>
 		<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<build>
 		<finalName>teste-ini</finalName>
@@ -28,29 +27,29 @@
 				<version>3.10.1</version>
 			</plugin>
 			<plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <id>copy-resource-one</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>/target</directory>
-                                    <includes>
-                                        <include>teste-ini.war</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-            </executions>
-          </plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>copy-resource-one</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps</outputDirectory>
+							<resources>
+								<resource>
+									<directory>/target</directory>
+									<includes>
+										<include>teste-ini.war</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -78,7 +77,7 @@
 			<artifactId>javax.faces</artifactId>
 			<version>2.3.5</version>
 		</dependency>
-				
+
 		<!-- Logging SLF4J com Log4J  -->
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12-->
 		<dependency>
@@ -92,8 +91,13 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.18.0</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>14.0.0</version>
+		</dependency>
 	</dependencies>
+
 	<!-- Repositorio PrimeFaces atzualizado 	-->
 	<repositories>
 		<repository>
